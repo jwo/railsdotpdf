@@ -1,0 +1,24 @@
+<% months ||= @months %>
+<div class="well">
+  <% unless defined?(pdf) && pdf %>
+    <%= link_to "Download PDF", root_path(:format => :pdf), class: "btn pull-right" %>
+  <% end %>
+  <h1>Chart#show</h1>
+</div>
+
+<p class="alert">Find me in app/views/chart/show.html.erb</p>
+
+<div id="annual"></div>
+<%= content_tag :div, "", id: "months_chart", data: {months: months} %>
+<table class="table table-striped table-bordered">
+  <tr>
+    <th>Month</th>
+    <th>Usage</th>
+  </tr>
+  <% months.each do |month| %>
+    <tr>
+      <td><%= month.month%></td>
+      <td><%= number_to_currency month.usage%></td>
+    </tr>
+  <% end %>
+</table>

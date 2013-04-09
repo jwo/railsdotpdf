@@ -1,0 +1,9 @@
+== Rails dot PDF
+
+Working implementation of a Rails app creating PDFs.
+
+* Uses the morris.js for cool graphing
+* Uses bootstrap for cool styling
+
+= Copyright
+2013 Jesse Wolgamott. MIT LICENSE
