@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'sqlite3'
 gem 'pry'
 
 
@@ -18,9 +17,11 @@ gem 'wicked_pdf'
 
 group :development do
   gem "wkhtmltopdf-binary"
+  gem 'sqlite3'
 end
 
 group :production do
   gem 'wkhtmltopdf-heroku'
+  gem 'pg'
 end
 
